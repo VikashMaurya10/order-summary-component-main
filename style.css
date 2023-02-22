@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    /* ### Primary */
+
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+
+    /* ### Neutral */
+    --Very-pal-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --fw-sm: 500;
+    --fw-md: 700;
+    --fw-lg: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Paleblue);
+    font-size: 1rem;
+    font-family: 'Red Hat Display', sans-serif;
+    line-height: 1.5;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--Dark-blue);
+    font-weight: var(--fw-lg);
+}
+
+p {
+    font-weight: var(--fw-sm);
+    color: var(--Desaturated-blue);
+}
+
+.card,
+.plan,
+button {
+    border-radius: 0.625rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: no-repeat url("./images/pattern-background-mobile.svg");
+    background-position: center top;
+    background-size: contain;
+}
+
+main .card {
+    width: 20.4375rem;
+    max-height: 35.5rem;
+    overflow: hidden;
+}
+
+main .card .image {
+    background: no-repeat url("./images/illustration-hero.svg");
+    background-size: cover;
+    background-position: center center;
+    height: 10rem;
+}
+
+.content {
+    background-color: var(--Very-pal-blue);
+    padding: 2.25rem 1.4375rem;
+    text-align: center;
+
+}
+
+.content h1 {
+    font-size: 1rem;
+}
+
+.content>p {
+    font-size: 0.75rem;
+    margin: 1.8125rem 0;
+}
+
+p span {
+    display: block;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5.125rem;
+    background: hsla(225, 100%, 94%, 0.523);
+}
+
+.plan h2,
+.plan p {
+    font-size: 0.625rem;
+}
+
+.plan h2 {
+    font-weight: var(--fw-lg);
+}
+
+.plan>a {
+    color: var(--Brightblue);
+    font-weight: var(--fw-md);
+
+}
+
+.plan>a:hover {
+    color: hsla(245, 75%, 52%, 0.664);
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: var(--Brightblue);
+    color: var(--Very-pal-blue);
+    padding: 1.125rem 0;
+    width: 100%;
+    font-weight: var(--fw-md);
+    cursor: pointer;
+    margin: 1.5625rem 0;
+    box-shadow: 0 0.75rem 1.25rem 0 hsla(245, 75%, 52%, 0.48);
+}
+
+button:hover {
+    background-color: hsla(245, 75%, 52%, 0.664);
+}
+
+.content>a {
+    color: var(--Desaturated-blue);
+    text-decoration: none;
+    font-weight: var(--fw-md);
+    font-size: 0.75rem;
+}
+
+.content>a:hover {
+    color: var(--Dark-blue);
+}
+
+
+
+@media (min-width:1440px) {
+    main {
+        background: no-repeat url("./images/pattern-background-desktop.svg");
+        background-position: center top;
+        background-size: contain;
+    }
+
+    main .card {
+        width: 28.125rem;
+        max-height: 43.6875rem;
+    }
+
+    main .card .image {
+        height: 13.75rem;
+    }
+
+    .content {
+        padding: 3.375rem 3rem;
+    }
+
+    .content h1 {
+        font-size: 1.25rem;
+    }
+
+    .card p {
+        font-size: 0.9rem !important;
+    }
+
+    .inner h2 {
+        font-size: 1rem;
+    }
+
+    .plan>a {
+        font-weight: var(--fw-md);
+    }
+}
